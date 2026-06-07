@@ -4,10 +4,9 @@ import FadeIn from '@/components/shared/FadeIn';
 import Magnet from '@/components/shared/Magnet';
 import ContactButton from '@/components/shared/ContactButton';
 
-const NAV_LINKS = ['About', 'Price', 'Projects', 'Contact'];
+const NAV_LINKS = ['About', 'Services', 'Projects', 'Contact'];
 
-const PORTRAIT_URL =
-  'https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png';
+const PORTRAIT_URL = '/Jack.png';
 
 export default function HeroSection() {
   return (
@@ -28,7 +27,7 @@ export default function HeroSection() {
 
       <FadeIn delay={0.15} y={40} className="overflow-hidden">
         <h1 className="hero-heading mt-6 w-full whitespace-nowrap text-[14vw] font-black uppercase leading-none tracking-tight sm:mt-4 sm:text-[15vw] md:-mt-5 md:text-[16vw] lg:text-[17.5vw]">
-          Hi, i&apos;m jack
+          Hi, i&apos;m jaka
         </h1>
       </FadeIn>
 
@@ -38,7 +37,7 @@ export default function HeroSection() {
             className="max-w-[160px] font-light uppercase leading-snug tracking-wide text-[#D7E2EA] sm:max-w-[220px] md:max-w-[260px]"
             style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
           >
-            a 3d creator driven by crafting striking and unforgettable projects
+            steering portfolio strategy at the crossroads of Islamic finance and the Hajj-Umrah economy
           </p>
         </FadeIn>
 
@@ -59,7 +58,7 @@ export default function HeroSection() {
           inactiveTransition="transform 0.6s ease-in-out"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={PORTRAIT_URL} alt="Jack portrait" className="w-full" />
+          <img src={PORTRAIT_URL} alt="Herrijal Jaka Utama portrait" className="w-full" />
         </Magnet>
       </FadeIn>
     </section>

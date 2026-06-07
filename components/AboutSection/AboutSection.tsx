@@ -4,79 +4,65 @@ import FadeIn from '@/components/shared/FadeIn';
 import AnimatedText from '@/components/shared/AnimatedText';
 import ContactButton from '@/components/shared/ContactButton';
 
-const DECORATIONS = [
-  {
-    src: 'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png',
-    alt: 'Moon icon',
-    className: 'top-[4%] left-[1%] w-[120px] sm:left-[2%] sm:w-[160px] md:left-[4%] md:w-[210px]',
-    delay: 0.1,
-    x: -80,
-  },
-  {
-    src: 'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/p59_1.4659672e.png',
-    alt: '3D object',
-    className:
-      'bottom-[8%] left-[3%] w-[100px] sm:left-[6%] sm:w-[140px] md:left-[10%] md:w-[180px]',
-    delay: 0.25,
-    x: -80,
-  },
-  {
-    src: 'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png',
-    alt: 'Lego icon',
-    className:
-      'top-[4%] right-[1%] w-[120px] sm:right-[2%] sm:w-[160px] md:right-[4%] md:w-[210px]',
-    delay: 0.15,
-    x: 80,
-  },
-  {
-    src: 'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/Group_134-1.2e04f3ce.png',
-    alt: '3D group',
-    className:
-      'bottom-[8%] right-[3%] w-[130px] sm:right-[6%] sm:w-[170px] md:right-[10%] md:w-[220px]',
-    delay: 0.3,
-    x: 80,
-  },
+const STAT_LINES = [
+  { value: '4', label: 'institutions advised' },
+  { value: '10+', label: 'live models & platforms shipped' },
+  { value: '2', label: 'sectors — Islamic finance & Hajj-Umrah' },
 ];
 
 const ABOUT_TEXT =
-  "With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let's build something incredible together!";
+  "I'm Herrijal Jaka Utama, Senior Manager for Portfolio Management at BPKH. I drive strategic oversight for BPKH subsidiaries and our direct investment portfolios, while orchestrating ecosystem positioning across Islamic finance and the Hajj-Umrah sectors. From high-stakes direct investments to optimized indirect placements, I bridge institutional rigor with high-impact growth. Let's build something rigorous together.";
 
 export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative flex min-h-screen flex-col items-center justify-center gap-10 px-5 py-20 sm:gap-14 sm:px-8 md:gap-16 md:px-10"
+      className="relative overflow-hidden px-5 py-24 sm:px-8 sm:py-28 md:px-10 md:py-36"
     >
-      {DECORATIONS.map((deco) => (
-        <FadeIn
-          key={deco.alt}
-          delay={deco.delay}
-          x={deco.x}
-          y={0}
-          duration={0.9}
-          className={`absolute z-0 ${deco.className}`}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={deco.src} alt={deco.alt} className="w-full" />
-        </FadeIn>
-      ))}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-32 top-10 h-[340px] w-[340px] rounded-full opacity-[0.16] blur-[120px]"
+        style={{ background: 'radial-gradient(circle, #D7E2EA 0%, transparent 70%)' }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-24 bottom-0 h-[300px] w-[300px] rounded-full opacity-[0.1] blur-[120px]"
+        style={{ background: 'radial-gradient(circle, #D7E2EA 0%, transparent 70%)' }}
+      />
 
-      <FadeIn delay={0} y={40}>
-        <h2
-          className="hero-heading text-center font-black uppercase leading-none tracking-tight"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
-        >
-          About me
-        </h2>
-      </FadeIn>
+      <div className="relative z-10 mx-auto grid max-w-6xl gap-16 md:grid-cols-[1.1fr_0.9fr] md:gap-12">
+        <div className="flex flex-col gap-10">
+          <FadeIn y={30}>
+            <span className="text-sm uppercase tracking-[0.3em] text-[#D7E2EA] opacity-50">
+              About
+            </span>
+          </FadeIn>
 
-      <div className="flex flex-col items-center gap-16 sm:gap-20 md:gap-24">
-        <AnimatedText
-          text={ABOUT_TEXT}
-          className="max-w-[560px] text-center font-medium leading-relaxed text-[#D7E2EA]"
-          style={{ fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
-        />
-        <ContactButton />
+          <AnimatedText
+            text={ABOUT_TEXT}
+            className="max-w-[620px] font-medium leading-relaxed text-[#D7E2EA]"
+            style={{ fontSize: 'clamp(1.15rem, 2.4vw, 1.75rem)' }}
+          />
+
+          <FadeIn delay={0.2} y={20}>
+            <ContactButton />
+          </FadeIn>
+        </div>
+
+        <div className="flex flex-col justify-center gap-10 md:border-l md:border-[#D7E2EA]/15 md:pl-12">
+          {STAT_LINES.map((stat, index) => (
+            <FadeIn key={stat.label} delay={0.1 + index * 0.12} y={24}>
+              <div className="flex items-baseline gap-4">
+                <span className="font-black tracking-tight text-[#D7E2EA]" style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)' }}>
+                  {stat.value}
+                </span>
+                <span className="max-w-[180px] text-sm uppercase leading-snug tracking-wide text-[#D7E2EA] opacity-50">
+                  {stat.label}
+                </span>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
       </div>
     </section>
   );

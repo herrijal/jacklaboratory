@@ -2,8 +2,9 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Jack -- 3D Creator',
-  description: 'Jack — a 3D creator driven by crafting striking and unforgettable projects.',
+  title: 'Herrijal Jaka Utama -- Investment Analyst & Strategic Advisor',
+  description:
+    'Herrijal Jaka Utama (Jaka) — Investment Analyst and Strategic Advisor at BPKH, BPKH Limited, Bank Muamalat Indonesia, and APIF, focused on Islamic finance and the Hajj-Umrah ecosystem.',
 };
 
 export const viewport: Viewport = {

@@ -16,15 +16,28 @@ export default function AnimatedText({ text, className, style }: AnimatedTextPro
     offset: ['start 0.8', 'end 0.2'],
   });
 
-  const characters = text.split('');
+  const words = text.split(' ');
+  const totalChars = text.length;
+  let charIndex = 0;
 
   return (
     <p ref={ref} className={className} style={style}>
-      {characters.map((char, index) => {
-        const start = index / characters.length;
-        const end = start + 1 / characters.length;
+      {words.map((word, wordIdx) => {
+        const chars = word.split('').map((char) => {
+          const start = charIndex / totalChars;
+          const end = start + 1 / totalChars;
+          charIndex += 1;
+          return { char, range: [start, end] as [number, number] };
+        });
+        charIndex += 1;
+
         return (
-          <Character key={index} char={char} progress={scrollYProgress} range={[start, end]} />
+          <span key={wordIdx} style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
+            {chars.map(({ char, range }, i) => (
+              <Character key={i} char={char} progress={scrollYProgress} range={range} />
+            ))}
+            {wordIdx < words.length - 1 ? ' ' : ''}
+          </span>
         );
       })}
     </p>
@@ -42,9 +55,9 @@ function Character({ char, progress, range }: CharacterProps) {
 
   return (
     <span style={{ position: 'relative', display: 'inline-block' }}>
-      <span style={{ visibility: 'hidden' }}>{char === ' ' ? ' ' : char}</span>
+      <span style={{ visibility: 'hidden' }}>{char}</span>
       <motion.span style={{ position: 'absolute', left: 0, top: 0, opacity }}>
-        {char === ' ' ? ' ' : char}
+        {char}
       </motion.span>
     </span>
   );
