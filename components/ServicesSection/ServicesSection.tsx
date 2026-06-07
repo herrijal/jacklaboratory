@@ -21,7 +21,7 @@ const SERVICES = [
     number: '03',
     name: 'Strategic Advisory',
     description:
-      'Advising across BPKH, BPKH Limited, Bank Muamalat Indonesia, and APIF on positioning, structuring, and portfolio strategy within Islamic finance mandates.',
+      'Monitoring the subsidiaries of BPKH and direct or indirect investment of BPKH on positioning, structuring, and portfolio strategy within Islamic finance mandates.',
     span: 'md:col-span-5',
   },
   {

@@ -31,7 +31,7 @@ export default function HeroSection() {
         </h1>
       </FadeIn>
 
-      <div className="mt-auto flex items-end justify-between pb-7 sm:pb-8 md:pb-10">
+      <div className="relative z-20 mt-auto flex items-end justify-between px-6 pb-7 sm:pb-8 md:px-10 md:pb-10">
         <FadeIn delay={0.35} y={20}>
           <p
             className="max-w-[160px] font-light uppercase leading-snug tracking-wide text-[#D7E2EA] sm:max-w-[220px] md:max-w-[260px]"

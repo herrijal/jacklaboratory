@@ -68,7 +68,7 @@ const PROJECTS: Project[] = [
     category: 'Commercial',
     name: 'Commercial',
     description:
-      'Live commercial strategy platform supporting positioning and structuring work across BPKH ecosystem mandates.',
+      'Demo platform for leasing commercial space during the Hajj season, supporting an asset-optimization project for accommodation leased by the Ministry of Hajj and Umrah, designed so rental value flows back to the ummah.',
     url: 'https://commercial.jacklaboratory.com/',
   },
   {
@@ -92,7 +92,7 @@ const PROJECTS: Project[] = [
     category: 'Knowledge Base',
     name: 'Ekosistem Perhajian',
     description:
-      'Structured reference layer mapping BPKH, BPKH Limited, Bank Muamalat Indonesia, and APIF, with analytical notes on the BPIH formula, Nilai Manfaat sustainability, and Saudi Vision 2030 context.',
+      'Structured reference layer mapping the Hajj and Umrah ecosystem.',
     visualSeed: 'ekosistem-perhajian',
   },
 ];
