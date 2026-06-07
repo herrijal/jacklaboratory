@@ -5,9 +5,9 @@ import AnimatedText from '@/components/shared/AnimatedText';
 import ContactButton from '@/components/shared/ContactButton';
 
 const STAT_LINES = [
-  { value: '4', label: 'institutions advised' },
+  { value: '3', label: 'institutions monitored' },
   { value: '10+', label: 'live models & platforms shipped' },
-  { value: '2', label: 'sectors — Islamic finance & Hajj-Umrah' },
+  { value: '2', label: 'sectors: Islamic finance & Hajj-Umrah' },
 ];
 
 const ABOUT_TEXT =
